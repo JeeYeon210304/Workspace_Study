@@ -5,10 +5,12 @@ public class testClass {
 	public static String star = "*";
 	
 	public static void main(String[] args) {
+		
 		// Gugudan();
 		// StarTower_1();
 		// StarTower_2();
 		StarTower_3();
+		
 	}
 	// *별찍기3
 	private static void StarTower_3() {
