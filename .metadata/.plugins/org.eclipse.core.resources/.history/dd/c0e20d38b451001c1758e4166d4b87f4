@@ -5,7 +5,7 @@ public class DoIt_JAVA {
 	public static void main(String[] args) {
 		print01();
 		testClass testCome = new testClass();
-		testCome.instanceMethod();
+		testCome.instanceMethod():L
 		
 	}
 
