@@ -1,0 +1,20 @@
+package JustForStudy_remindOfCollections;
+
+import java.util.ArrayList;
+
+public class List {
+	public static void main(String[] args) {
+		
+		// ArrayList는 배열과 다르게 한계가 없다.
+		// 선언시 기본타입을 generic<>으로 정하지 않으면 Object이다.
+		ArrayList first = new ArrayList();
+		first.add("little ");
+		first.add("test");
+		// 배열과 다르게 length가 아니라 size를 사용한다.
+		for(int i=0; i<first.size(); i++) {
+			String result = (String)first.get(i);
+			System.out.print(result);
+		}
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;JustForStudy_remindOfList&apos; to &apos;JustForStudy_remindOfCollections&apos;&#x0D;&#x0A;- Original project: &apos;JustForStudy&apos;&#x0D;&#x0A;- Original element: &apos;JustForStudy/src/JustForStudy_remindOfList&apos;&#x0D;&#x0A;- Renamed element: &apos;JustForStudy/src/JustForStudy_remindOfCollections&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;JustForStudy_remindOfList&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;JustForStudy_remindOfList" name="JustForStudy_remindOfCollections" qualified="false" references="true" stamp="1639900815592" textual="false" version="1.0"/>
+</session>
