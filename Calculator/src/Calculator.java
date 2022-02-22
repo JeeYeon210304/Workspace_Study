@@ -60,7 +60,32 @@ public class Calculator implements ActionListener{
 			numberButtons[i].setFocusable(false);
 		}
 		
+		delButton.setBounds(50,430,145,50);
+		clrButton.setBounds(205,430,145,50);
 		
+		panel = new JPanel();
+		panel.setBounds(50,100, 300, 300);
+		panel.setLayout(new GridLayout(4,4,10,10));
+		panel.add(numberButtons[1]);
+		panel.add(numberButtons[2]);
+		panel.add(numberButtons[3]);
+		panel.add(addButton);
+		panel.add(numberButtons[4]);
+		panel.add(numberButtons[5]);
+		panel.add(numberButtons[6]);
+		panel.add(subButton);
+		panel.add(numberButtons[7]);
+		panel.add(numberButtons[8]);
+		panel.add(numberButtons[9]);
+		panel.add(mulButton);
+		panel.add(decButton);
+		panel.add(numberButtons[0]);
+		panel.add(equButton);
+		panel.add(divButton);
+		
+		frame.add(panel);
+		frame.add(delButton);
+		frame.add(clrButton);
 		frame.add(textfield);
 		frame.setVisible(true);
 		
@@ -71,10 +96,82 @@ public class Calculator implements ActionListener{
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		
+		// 클릭버튼
+		for(int i=0;i<10;i++) {
+			if(e.getSource() == numberButtons[i]) {
+				textfield.setText(textfield.getText().concat(String.valueOf(i)));
+			}
+		}
+		// + / * - 등을 누르면 첫 숫자값이 num1으로 parseDcouble 텍스트 값을 가져옴
+		if(e.getSource()==decButton) {
+			textfield.setText(textfield.getText().concat("."));
+		}
+		if(e.getSource()==addButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '+';
+			textfield.setText("");
+		}
+		if(e.getSource()==subButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '-';
+			textfield.setText("");
+		}
+		if(e.getSource()==mulButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '+';
+			textfield.setText("");
+		}
+		if(e.getSource()==divButton) {
+			num1 = Double.parseDouble(textfield.getText());
+			operator = '/';
+			textfield.setText("");
+		}
+		// = 를 누르면 두번째 숫자값이 num2로 가져와짐
+		if(e.getSource()==equButton) {
+			num2=Double.parseDouble(textfield.getText());
+			
+			switch(operator) {
+			case'+':
+				result=num1+num2;
+				break;
+			case'-':
+				result=num1-num2;
+				break;
+			case'*':
+				result=num1+num2;
+				break;
+			case'/':
+				result=num1/num2;
+				break;
+			}
+			textfield.setText(String.valueOf(result));
+			num1=result;
+		}
+		if(e.getSource()==clrButton) {
+			textfield.setText("");
+		}
+		if(e.getSource()==delButton) {
+			String string = textfield.getText();
+			textfield.setText("");;
+			for(int i=0;i<string.length()-1;i++) {
+				textfield.setText(textfield.getText()+string.charAt(i));
+			}
+		}
 		
 	}
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
 
 
 
